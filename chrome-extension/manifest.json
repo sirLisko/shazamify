@@ -1,0 +1,20 @@
+{
+	"name": "Shazamify",
+	"version": "0.0.1",
+	"description": "Shazamify allows you to play your Shazams in Spotify, directly from the browser.",
+	"manifest_version": 2,
+	"content_scripts": [
+		{
+			"matches": [
+				"http://www.shazam.com/discover/track/*"
+			],
+			"css": ["style.css"],
+			"js": ["base.js"]
+		}
+	],
+	"icons": {
+		"16": "icons/icon16.png",
+		"48": "icons/icon48.png",
+		"128": "icons/icon128.png"
+	}
+}
