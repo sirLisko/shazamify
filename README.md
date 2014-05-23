@@ -8,4 +8,4 @@ Shazamify add a small Spotify icon to every Shazam track page and allows you to 
 
 ##Links
 
-###[Chrome extension](https://chrome.google.com/webstore/detail/sproxify/kiohegnpcjpnamjjlobofaiegnpnepnc?utm_source=chrome-ntp-icon)
+###[Chrome extension](https://chrome.google.com/webstore/detail/shazamify/bmijgfabheacpgpemckfpfmebcdjlolh)
