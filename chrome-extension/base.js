@@ -16,7 +16,7 @@
 	function apiOnLoad(e){
 		var data = e.target;
 		if (data.status >= 200 && data.status < 400){
-			data = JSON.parse(data.response);
+			data = JSON.parse(data.responseText);
 			handleResponse(data);
 		}
 	}
@@ -29,7 +29,9 @@
 	}
 
 	function getUrl(){
-		return urlBase + encodeURIComponent(document.querySelector('.tr-details').innerText);
+		var track = document.querySelector('.trd-title').textContent + ' ' +
+					document.querySelector('.trd-artist').textContent;
+		return urlBase + encodeURIComponent(track);
 	}
 
 	function waitForNewTrack(){
