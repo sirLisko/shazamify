@@ -10,9 +10,10 @@
 		document.body.appendChild(fakeDOM);
 	}
 
-	function loadExtension(){
+	function loadExtension(callback){
 		var resource = document.createElement('script');
 		resource.src = 'base/chrome-extension/base.js';
+		resource.onload = callback;
 		var script = document.getElementsByTagName('script')[0];
 		script.parentNode.insertBefore(resource, script);
 	}
@@ -31,17 +32,14 @@
 	});
 
 	asyncTest('Check that the correct track info are passed to the Spotify API', 1, function() {
-		loadExtension();
-		setTimeout(function() {
+		loadExtension(function(){
 			start();
-
 			ok(server.requests[0].url.indexOf('foo%20bar'), 'right query string appended');
-		}, 100);
+		});
 	});
 
 	asyncTest('Spotify API returns no tracks', 1, function() {
-		loadExtension();
-		setTimeout(function() {
+		loadExtension(function(){
 			start();
 
 			server.requests[0].respond(
@@ -51,12 +49,11 @@
 			);
 
 			ok(!document.querySelectorAll('#shazamify').length, 'shazamify trigger has not been created!');
-		}, 100);
+		});
 	});
 
 	asyncTest('Spotify API returns tracks', 2, function() {
-		loadExtension();
-		setTimeout(function() {
+		loadExtension(function(){
 			start();
 
 			server.requests[0].respond(
@@ -70,6 +67,6 @@
 			var shazamify = document.querySelectorAll('#shazamify');
 			ok(shazamify.length, 'shazamify trigger has been created!');
 			ok(shazamify[0].href, 'bar', 'with the correct href');
-		}, 100);
+		});
 	});
 })();
