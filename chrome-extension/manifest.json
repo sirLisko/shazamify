@@ -6,7 +6,7 @@
 	"content_scripts": [
 		{
 			"matches": [
-				"http://www.shazam.com/discover/track/*"
+				"http://www.shazam.com/track/*"
 			],
 			"css": ["style.css"],
 			"js": ["base.js"]

@@ -49,7 +49,7 @@
 	}
 
 	function attachEvents() {
-		var tracks = document.querySelectorAll('[data-track-id] [href*="discover/track"]');
+		var tracks = document.querySelectorAll('[data-track-id] [href*="track"]');
 		Array.prototype.forEach.call(tracks, function(track){
 			track.addEventListener('click', waitForNewTrack, false);
 		});
