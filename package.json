@@ -1,6 +1,6 @@
 {
   "name": "shazamify",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Shazamfy allows you to play your Shazams in Spotify, directly from the browser.",
   "scripts": {
     "test": "./node_modules/karma/bin/karma start --browsers PhantomJS"
@@ -18,12 +18,13 @@
   "bugs": {
     "url": "https://github.com/sirLisko/shazamify/issues"
   },
+  "license": "MIT",
   "homepage": "https://github.com/sirLisko/shazamify",
   "devDependencies": {
-    "karma": "^0.12.16",
-    "karma-chrome-launcher": "^0.1.4",
-    "karma-qunit": "^0.1.1",
-    "sinon": "^1.10.0",
-    "karma-phantomjs-launcher": "^0.1.4"
+    "karma": "^0.13.15",
+    "karma-chrome-launcher": "^0.2.1",
+    "karma-qunit": "^0.1.8",
+    "sinon": "^1.17.2",
+    "karma-phantomjs-launcher": "^0.2.1"
   }
 }
