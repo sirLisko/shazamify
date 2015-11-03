@@ -9,7 +9,7 @@
 			button.id = 'shazamify';
 			button.href = data.tracks[0].href;
 
-			document.querySelector('.tr-buttons').appendChild(button);
+			document.querySelector('.ctrl-bar > div').appendChild(button);
 		}
 	}
 
