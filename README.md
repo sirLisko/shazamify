@@ -12,5 +12,16 @@ Shazamify add a small Spotify icon to every Shazam track page and allows you to 
 2. Open `chrome://chrome/extensions/`.
 3. Drag and drop the folder `chrome-extension` in the browser window.
 
+##Installation on other browsers
+1. You need an extension in order to use UserScripts in your browser, here are the most popular:  
+    * ***Firefox***: Install [GreaseMonkey](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/).
+    * ***Safari***: Install [NinjaKit](http://d.hatena.ne.jp/os0x/20100612/1276330696).
+    * ***IE***: Install [Trixie](http://www.bhelpuri.net/Trixie/).
+    * ***Opera***: Follow instructions located on Opera's site: [User JS](http://www.opera.com/docs/userjs/).
+
+2. Install Shazamify simply clicking here: [Shazamify](https://github.com/sirlisko/shazamify/raw/master/shazamify.user.js).  
+
+
+
 ##Note
 Unfortunately the Chrome Extension was dropped from the store because it used the word Shazam. Anyway the good news is that you can still enjoying it with a manual installation :)
