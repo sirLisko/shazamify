@@ -8,7 +8,7 @@ Shazamify add a small Spotify icon to every Shazam track page and allows you to 
 
 ##Chrome Extension
 
-###[Link to the Webstore](https://chrome.google.com/webstore/detail/zamify/bmijgfabheacpgpemckfpfmebcdjlolh)
+###[~~Link to the Webstore~~](https://chrome.google.com/webstore/detail/zamify/bmijgfabheacpgpemckfpfmebcdjlolh)<sup id="a1">[1](#f1)</sup>
 
 or you can install it *manually*:
 
@@ -28,6 +28,8 @@ or you can install it *manually*:
 
 
 ##Note
-UPDATE: The Chrome Extension is back only with a new fancy name (**Zamify**), thanks coypright!
+<b id="f1">**UPDATE 3**</b>: The *Chrome Extension* was taken down without any notice from the store. Thanks Google, thanks! I am trying to figure out what I can do about it. In the meanwhile you can use the User Script solution.
 
-~~Unfortunately the Chrome Extension was taken down from the store because it used the word Shazam. Anyway the good news is that you can still enjoying it with a manual installation :)~~
+~~**UPDATE 2**: The *Chrome Extension* is back only with a new fancy name (**Zamify**), thanks coypright!~~
+
+~~**UPDATE**: Unfortunately the *Chrome Extension* was taken down from the store because it used the word Shazam. Anyway the good news is that you can still enjoying it with a manual installation :)~~
