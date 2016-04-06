@@ -1,13 +1,13 @@
 (function(){
 	'use strict';
 
-	var urlBase = 'http://ws.spotify.com/search/1/track.json?q=', url;
+	var urlBase = 'https://api.spotify.com/v1/search?type=track&q=', url;
 
 	function handleResponse(data){
-		if(data.tracks.length) {
+		if(data && data.tracks && data.tracks.items && data.tracks.items.length) {
 			var button = document.createElement('a');
 			button.id = 'shazamify';
-			button.href = data.tracks[0].href;
+			button.href = data.tracks.items[0].href;
 
 			document.querySelector('.ctrl-bar > div').appendChild(button);
 		}
@@ -29,8 +29,8 @@
 	}
 
 	function getUrl(){
-		var track = document.querySelector('.trd-title').textContent + ' ' +
-					document.querySelector('.trd-artist').textContent;
+		var track = document.querySelector('.trd-title').textContent +
+			' artist:' + document.querySelector('.trd-artist').textContent;
 		return urlBase + encodeURIComponent(track);
 	}
 
