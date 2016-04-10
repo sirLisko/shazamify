@@ -3,10 +3,10 @@
 // @description   Shazamify allows you to play your Shazams in Spotify, directly from the browser.
 // @author        Luca Lischetti <sirlisko@gmail.com>
 // @namespace     http://github.com/sirLisko/shazamify
-// @include       http://www.shazam.com/track/*
+// @include       http://www.shazam.com/*track/*
 // @downloadURL   https://github.com/sirlisko/shazamify/raw/master/shazamify.user.js
 // @updateURL     https://github.com/sirlisko/shazamify/raw/master/shazamify.user.js
-// @version       0.2.1
+// @version       0.3.0
 // ==/UserScript==
 
 (function(){
