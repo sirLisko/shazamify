@@ -6,7 +6,7 @@
 // @include       http://www.shazam.com/track/*
 // @downloadURL   https://github.com/sirlisko/shazamify/raw/master/shazamify.user.js
 // @updateURL     https://github.com/sirlisko/shazamify/raw/master/shazamify.user.js
-// @version       0.2.0
+// @version       0.2.1
 // ==/UserScript==
 
 (function(){
@@ -18,7 +18,7 @@
 		if(data && data.tracks && data.tracks.items && data.tracks.items.length) {
 			var button = document.createElement('a');
 			button.id = 'shazamify';
-			button.href = data.tracks.items[0].href;
+			button.href = data.tracks.items[0].uri;
 
 			document.querySelector('.ctrl-bar > div').appendChild(button);
 		}

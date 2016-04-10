@@ -67,7 +67,7 @@
 				{ 'Content-Type': 'application/json' },
 				JSON.stringify({ tracks: {
 					items: [{
-						href: 'bar'
+						uri: 'bar'
 					}]
 				}})
 			);

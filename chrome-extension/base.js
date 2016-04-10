@@ -7,7 +7,7 @@
 		if(data && data.tracks && data.tracks.items && data.tracks.items.length) {
 			var button = document.createElement('a');
 			button.id = 'shazamify';
-			button.href = data.tracks.items[0].href;
+			button.href = data.tracks.items[0].uri;
 
 			document.querySelector('.ctrl-bar > div').appendChild(button);
 		}
