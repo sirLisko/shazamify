@@ -1,9 +1,10 @@
 {
   "name": "shazamify",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Shazamfy allows you to play your Shazams in Spotify, directly from the browser.",
   "scripts": {
-    "test": "./node_modules/karma/bin/karma start --browsers PhantomJS"
+    "test": "./node_modules/karma/bin/karma start --browsers PhantomJS",
+    "lint": "./node_modules/.bin/eslint ."
   },
   "repository": {
     "type": "git",
@@ -21,10 +22,28 @@
   "license": "MIT",
   "homepage": "https://github.com/sirLisko/shazamify",
   "devDependencies": {
+    "eslint": "^3.9.0",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-plugin-promise": "^3.3.0",
+    "eslint-plugin-standard": "^2.0.1",
     "karma": "^0.13.15",
     "karma-chrome-launcher": "^0.2.1",
+    "karma-phantomjs-launcher": "^0.2.1",
     "karma-qunit": "^0.1.8",
-    "sinon": "^1.17.2",
-    "karma-phantomjs-launcher": "^0.2.1"
+    "phantomjs": "^2.1.7",
+    "qunitjs": "^1.23.1",
+    "sinon": "^1.17.2"
+  },
+  "eslintConfig": {
+    "extends": [
+      "standard"
+    ],
+    "plugins": [
+      "standard"
+    ],
+    "env": {
+      "browser": true,
+      "qunit": true
+    }
   }
 }
