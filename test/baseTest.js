@@ -6,12 +6,7 @@
   function createDOM () {
     var fakeDOM = document.createElement('div')
     fakeDOM.className = 'fakeDOM'
-    fakeDOM.innerHTML =
-    '<div class="tr-details">' +
-    '<h1 class="trd-title">foo</h1>' +
-    '<h2 class="trd-artist">bar</h2>' +
-    '</div>' +
-    '<div class="ctrl-bar"><div>'
+    fakeDOM.innerHTML = '<div class="parts"><div>'
 
     document.body.appendChild(fakeDOM)
   }
@@ -51,6 +46,12 @@
       server.requests[0].respond(
         200,
         { 'Content-Type': 'application/json' },
+        JSON.stringify({ heading: {title: 'foo'} })
+      )
+
+      server.requests[1].respond(
+        200,
+        { 'Content-Type': 'application/json' },
         JSON.stringify({ tracks: [] })
       )
 
@@ -63,6 +64,12 @@
       start()
 
       server.requests[0].respond(
+        200,
+        { 'Content-Type': 'application/json' },
+        JSON.stringify({ heading: {title: 'foo'} })
+      )
+
+      server.requests[1].respond(
         200,
         { 'Content-Type': 'application/json' },
         JSON.stringify({ tracks: {

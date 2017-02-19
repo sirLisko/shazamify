@@ -37,4 +37,4 @@ or you can install it *manually*:
 
 
 ## Screenshot
-![screenshot](./images/shazamify.jpg)
+![screenshot](./images/shazamify.png)
