@@ -19,14 +19,18 @@
     script.parentNode.insertBefore(resource, script)
   }
 
+  var clock
   var server
 
   module('shazamify', {
     setup: function () {
+      clock = sinon.useFakeTimers()
       server = sinon.fakeServer.create()
+
       createDOM()
     },
     teardown: function () {
+      clock.restore()
       server.restore()
       document.body.removeChild(document.querySelector('.fakeDOM'))
     }
@@ -55,6 +59,8 @@
         JSON.stringify({ tracks: [] })
       )
 
+      clock.tick(1001)
+
       ok(!document.querySelectorAll('#shazamify').length, 'shazamify trigger has not been created!')
     })
   })
@@ -78,6 +84,8 @@
           }]
         }})
       )
+
+      clock.tick(1001)
 
       var shazamify = document.querySelectorAll('#shazamify')
       ok(shazamify.length, 'shazamify trigger has been created!')
