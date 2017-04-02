@@ -7,9 +7,9 @@ Shazamify allows you to play your Shazams in Spotify, directly from the browser.
 Shazamify add a small Spotify icon to every Shazam track page and allows you to play that track directly in Spotify.
 
 
-##Chrome Extension
+## Chrome Extension
 
-###[~~Link to the Webstore~~](https://chrome.google.com/webstore/detail/zamify/bmijgfabheacpgpemckfpfmebcdjlolh)<sup id="a1">[1](#f1)</sup>
+### [~~Link to the Webstore~~](https://chrome.google.com/webstore/detail/zamify/bmijgfabheacpgpemckfpfmebcdjlolh)<sup id="a1">[1](#f1)</sup>
 
 or you can install it *manually*:
 
