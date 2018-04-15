@@ -1,6 +1,6 @@
 {
   "name": "shazamify",
-  "version": "0.5.0",
+  "version": "1.0.0",
   "description": "Shazamfy allows you to play your Shazams in Spotify, directly from the browser.",
   "scripts": {
     "build": "cross-zip chrome-extension",

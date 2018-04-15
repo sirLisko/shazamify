@@ -1,11 +1,10 @@
-Shazamify (a.k.a. Zamify)  [![Build Status](https://travis-ci.org/sirLisko/shazamify.svg)](https://travis-ci.org/sirLisko/shazamify)
-========
+# Shazamify (a.k.a. Zamify)
+
 ![image](./images/icon.png)
 
 Shazamify allows you to play your Shazams in Spotify, directly from the browser.
 
 Shazamify add a small Spotify icon to every Shazam track page and allows you to play that track directly in Spotify.
-
 
 ## Chrome Extension
 
@@ -13,12 +12,12 @@ Shazamify add a small Spotify icon to every Shazam track page and allows you to 
 
 or you can install it *manually*:
 
-1. Download the user script.
-2. Open `chrome://chrome/extensions/`.
-3. Drag and drop the folder `chrome-extension` in the browser window.
+1. Download the `chrome-extension` folder.
+2. Go to [chrome://extensions/](chrome://extensions/)
+3. Drag and drop the file `chrome-extension.crx` in the browser window.
 
+## Installation on other browsers - DEPRECATED
 
-## Installation on other browsers
 1. You need an extension in order to use UserScripts in your browser, here are the most popular:
     * ***Firefox***: Install [GreaseMonkey](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/).
     * ***Safari***: Install [NinjaKit](http://d.hatena.ne.jp/os0x/20100612/1276330696).
@@ -27,8 +26,10 @@ or you can install it *manually*:
 
 2. Install Shazamify simply clicking here: [Shazamify](https://github.com/sirlisko/shazamify/raw/master/shazamify.user.js).
 
-
 ## Note
+
+**UPDATE 4**: Since mid 2017 Spotify blocked unauthenticated API calls, unfortunately, because of that, the user scripts are not longer working :(
+
 <b id="f1">**UPDATE 3**</b>: The *Chrome Extension* was taken down without any notice from the store. Thanks Google, thanks! I am trying to figure out what I can do about it. In the meanwhile you can use the User Script solution.
 
 ~~**UPDATE 2**: The *Chrome Extension* is back only with a new fancy name (**Zamify**), thanks coypright!~~
@@ -37,4 +38,5 @@ or you can install it *manually*:
 
 
 ## Screenshot
+
 ![screenshot](./images/shazamify.png)

@@ -1,3 +1,5 @@
+/* global chrome */
+
 (function () {
   'use strict'
 
@@ -5,30 +7,21 @@
   var trackApiUrl = 'https://www.shazam.com/discovery/v1/en/GB/web/-/track/'
   var url
 
-  function handleResponse (data) {
-    if (data && data.tracks && data.tracks.items && data.tracks.items.length) {
+  function handleResponse ({ tracks: { items } = {} }) {
+    if (items && items.length) {
       var button = document.createElement('a')
       button.id = 'shazamify'
-      button.href = data.tracks.items[0].uri
+      button.href = items[0].uri
       setTimeout(function () {
         document.querySelector('.parts').appendChild(button)
       }, 1000)
     }
   }
 
-  function apiOnLoad (e) {
-    var data = e.target
-    if (data.status >= 200 && data.status < 400) {
-      data = JSON.parse(data.responseText)
-      handleResponse(data)
-    }
-  }
-
   function searchSpotify (track) {
-    var request = new XMLHttpRequest()
-    request.open('GET', getUrl(track), true)
-    request.onload = apiOnLoad
-    request.send()
+    chrome.runtime.sendMessage(getUrl(track), result => {
+      handleResponse(result)
+    })
   }
 
   function getUrl (track) {
