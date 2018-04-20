@@ -25,20 +25,24 @@ const authorize = () => new Promise((resolve, reject) => {
     }),
     interactive: true
   }, redirectURL => {
-    const params = new URLSearchParams(redirectURL.split('#')[1])
-    if (params.get('state') !== state) {
-      throw new Error('Invalid state')
+    if (!redirectURL) {
+      console.error('RedirectUrl wrong!')
+    } else {
+      const params = new URLSearchParams(redirectURL.split('#')[1])
+      if (params.get('state') !== state) {
+        throw new Error('Invalid state')
+      }
+      const accessToken = params.get('access_token')
+      chrome.storage.local.set({ accessToken }, () => {
+        resolve(accessToken)
+      })
     }
-    const accessToken = params.get('access_token')
-    chrome.storage.local.set({ accessToken }, () => {
-      resolve(accessToken)
-    })
   })
 })
 
 const getToken = () => new Promise((resolve, reject) => {
-  chrome.storage.local.get('accessToken', result => {
-    resolve(result.accessToken || authorize())
+  chrome.storage.local.get('accessToken', ({ accessToken }) => {
+    resolve(accessToken || authorize())
   })
 })
 
@@ -51,7 +55,7 @@ const searchTrack = async (url, sendResponse) => {
   const data = await response.json()
   if (data.error) {
     console.error(data.error)
-    if (data.error.status === 400) {
+    if (data.error.status === 400 || data.error.status === 401) {
       authorize()
     }
     return
