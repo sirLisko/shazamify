@@ -1,4 +1,4 @@
-# Shazamify (a.k.a. Zamify)
+# Shazamify (a.k.a. Zamify) [![Build Status](https://travis-ci.org/sirLisko/shazamify.svg)](https://travis-ci.org/sirLisko/shazamify)
 
 ![image](./images/icon.png)
 
@@ -16,11 +16,11 @@ Shazamify add a small Spotify icon to every Shazam track page and allows you to 
 
 **UPDATE 4**: Since mid 2017 Spotify blocked unauthenticated API calls, unfortunately, because of that, the user scripts are not longer working :(
 
-~~**UPDATE 3**</b>: The *Chrome Extension* was taken down without any notice from the store. Thanks Google, thanks! I am trying to figure out what I can do about it. In the meanwhile you can use the User Script solution.~~
+~~**UPDATE 3**</b>: The _Chrome Extension_ was taken down without any notice from the store. Thanks Google, thanks! I am trying to figure out what I can do about it. In the meanwhile you can use the User Script solution.~~
 
-~~**UPDATE 2**: The *Chrome Extension* is back only with a new fancy name (**Zamify**), thanks coypright!~~
+~~**UPDATE 2**: The _Chrome Extension_ is back only with a new fancy name (**Zamify**), thanks coypright!~~
 
-~~**UPDATE**: Unfortunately the *Chrome Extension* was taken down from the store because it used the word Shazam. Anyway the good news is that you can still enjoying it with a manual installation :)~~
+~~**UPDATE**: Unfortunately the _Chrome Extension_ was taken down from the store because it used the word Shazam. Anyway the good news is that you can still enjoying it with a manual installation :)~~
 
 ## Screenshot
 
