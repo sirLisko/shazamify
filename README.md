@@ -22,6 +22,10 @@ Shazamify add a small Spotify icon to every Shazam track page and allows you to 
 
 ~~**UPDATE**: Unfortunately the _Chrome Extension_ was taken down from the store because it used the word Shazam. Anyway the good news is that you can still enjoying it with a manual installation :)~~
 
+### DEV note
+
+Every change of the extension is creating a new extension `id` hence a new redirect url needs to be updated in the Spotify dev console.
+
 ## Screenshot
 
 ![screenshot](./images/shazamify.png)
