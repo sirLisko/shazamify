@@ -13,7 +13,9 @@
       button.id = 'shazamify'
       button.href = items[0].uri
       setTimeout(function () {
-        document.querySelector('.parts').appendChild(button)
+        Array.from(document.querySelectorAll('.parts')).map((elem) =>
+          elem.appendChild(button)
+        )
       }, 1000)
     }
   }
@@ -57,10 +59,17 @@
     }
   }
 
-  function attachEvents () {
-    document.addEventListener('click', function (e) {
-      e.target.getAttribute('href').indexOf('www.shazam.com/track') !== -1 && waitForNewTrack()
-    }, false)
+  function attachEvents() {
+    document.addEventListener(
+      'click',
+      function (e) {
+        e.target.getAttribute('href') &&
+          e.target.getAttribute('href').indexOf('www.shazam.com/track') !==
+            -1 &&
+          waitForNewTrack()
+      },
+      false
+    )
   }
 
   attachEvents()
