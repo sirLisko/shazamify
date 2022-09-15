@@ -1,10 +1,10 @@
-# Shazamify (a.k.a. Zamify) [![Build Status](https://travis-ci.org/sirLisko/shazamify.svg)](https://travis-ci.org/sirLisko/shazamify)
+# Shazamify (a.k.a. Zamify)
 
 ![image](./images/icon.png)
 
 Shazamify allows you to play your Shazams in Spotify, directly from the browser.
 
-Shazamify add a small Spotify icon to every Shazam track page and allows you to play that track directly in Spotify.
+Shazamify adds a small Spotify icon to the Shazam track page and allows you to play that track directly in Spotify.
 
 ## Chrome Extension
 
