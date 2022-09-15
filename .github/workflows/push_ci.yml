@@ -32,9 +32,3 @@ jobs:
         run: npm ci
       - name: Run Lint
         run: npm run lint
-      - name: Run Unit Test
-        run: npm run unit
-      - name: Run E2E Test
-        run: npm run integration
-        env:
-          GIF_API_KEY: ${{ secrets.GIF_API_KEY }}
