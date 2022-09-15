@@ -4,7 +4,8 @@
   'use strict'
 
   var urlBase = 'https://api.spotify.com/v1/search?type=track&q='
-  var trackApiUrl = 'https://www.shazam.com/discovery/v1/en/GB/web/-/track/'
+  var trackApiUrl = 'https://www.shazam.com/discovery/v5/en/GB/web/-/track/'
+  var apiVersion = '?shazamapiversion=v3'
   var url
 
   function handleResponse({ tracks: { items } = {} }) {
@@ -40,22 +41,14 @@
     }, 1000)
   }
 
-  function getTrackInfo(e) {
-    var data = e.target
-    if (data.status >= 200 && data.status < 400) {
-      data = JSON.parse(data.responseText)
-      searchSpotify(data.heading)
-    }
-  }
-
   function getTrack() {
     url = location.href
     var trackId = /\d+/g.exec(location.href)[0]
     if (trackId.length) {
-      var request = new XMLHttpRequest()
-      request.open('GET', trackApiUrl + trackId, true)
-      request.onload = getTrackInfo
-      request.send()
+      fetch(trackApiUrl + trackId + apiVersion)
+        .then((response) => response.json())
+        .then(searchSpotify(data))
+        .catch(() => {})
     }
   }
 
