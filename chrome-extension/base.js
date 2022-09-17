@@ -6,7 +6,12 @@
   var urlBase = 'https://api.spotify.com/v1/search?type=track&q='
   var trackApiUrl = 'https://www.shazam.com/discovery/v5/en/GB/web/-/track/'
   var apiVersion = '?shazamapiversion=v3'
+  var trackRegex = /www.shazam.com\/\w+\/track/
   var url
+
+  function isTrackPage() {
+    return trackRegex.test(location.href)
+  }
 
   function handleResponse({ tracks: { items } = {} }) {
     if (items && items.length) {
@@ -32,23 +37,16 @@
     return urlBase + encodeURIComponent(query)
   }
 
-  function waitForNewTrack() {
-    var waitTrack = setInterval(function () {
-      if (url !== location.href) {
-        clearInterval(waitTrack)
-        getTrack()
-      }
-    }, 1000)
-  }
-
   function getTrack() {
     url = location.href
-    var trackId = /\d+/g.exec(location.href)[0]
-    if (trackId.length) {
-      fetch(trackApiUrl + trackId + apiVersion)
-        .then((response) => response.json())
-        .then(searchSpotify(data))
-        .catch(() => {})
+    if (isTrackPage()) {
+      var trackId = /\d+/g.exec(location.href)[0]
+      if (trackId.length) {
+        fetch(trackApiUrl + trackId + apiVersion)
+          .then((response) => response.json())
+          .then(searchSpotify)
+          .catch(() => {})
+      }
     }
   }
 
@@ -56,10 +54,9 @@
     document.addEventListener(
       'click',
       function (e) {
-        e.target.getAttribute('href') &&
-          e.target.getAttribute('href').indexOf('www.shazam.com/track') !==
-            -1 &&
-          waitForNewTrack()
+        setTimeout(function () {
+          getTrack()
+        }, 500)
       },
       false
     )

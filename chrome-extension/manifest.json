@@ -1,13 +1,13 @@
 {
   "name": "Zamify",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Zamify allows you to play your Shazams in Spotify, directly from the browser.",
   "manifest_version": 2,
   "web_accessible_resources": ["/oauth2/*"],
   "permissions": ["identity", "storage"],
   "content_scripts": [
     {
-      "matches": ["https://www.shazam.com/*track/*"],
+      "matches": ["https://www.shazam.com/*"],
       "css": ["style.css"],
       "js": ["base.js"]
     }
